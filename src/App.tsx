@@ -1,6 +1,28 @@
 import React, { useState } from 'react';
 import { Coins, CreditCard, ChevronDown } from 'lucide-react';
 
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+
+import '@rainbow-me/rainbowkit/styles.css';
+import {
+  getDefaultConfig,
+  RainbowKitProvider,
+} from '@rainbow-me/rainbowkit';
+import { WagmiProvider } from 'wagmi';
+import {
+  polygon,
+  optimism,
+  arbitrum,
+  base,
+} from 'wagmi/chains';
+import {
+  QueryClientProvider,
+  QueryClient,
+} from "@tanstack/react-query";
+
+
+
+
 function App() {
   const [isWalletConnected, setIsWalletConnected] = useState(false);
   const [amount, setAmount] = useState('');
@@ -12,6 +34,8 @@ function App() {
     'Polygon',
     'Avalanche'
   ];
+
+
 
   const handleConnect = () => {
     setIsWalletConnected(true);
@@ -25,14 +49,27 @@ function App() {
     alert(`Processing payment of ${amount} on ${selectedChain}`);
   };
 
+  const config = getDefaultConfig({
+    appName: 'App',
+    projectId: '123',
+    chains: [polygon, optimism, arbitrum, base],
+    ssr: true, // If your dApp uses server side rendering (SSR)
+  });
+  const queryClient = new QueryClient();
   return (
+      <WagmiProvider config={config}>
+        <QueryClientProvider client={queryClient}>
+          <RainbowKitProvider>
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
         <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">Crypto Payment</h1>
-        
+
         {/* Wallet Connection */}
         <div className="mb-6">
-          <button
+
+          <div className="flex justify-center">
+
+          <ConnectButton
             onClick={handleConnect}
             className={`w-full py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-all ${
               isWalletConnected
@@ -42,7 +79,8 @@ function App() {
           >
             <Coins size={20} />
             {isWalletConnected ? 'Wallet Connected' : 'Connect Wallet'}
-          </button>
+          </ConnectButton>
+          </div>
         </div>
 
         {/* Amount Input */}
@@ -86,16 +124,22 @@ function App() {
         </div>
 
         {/* Pay Button */}
+
+
+
         <button
           onClick={handlePay}
           disabled={!isWalletConnected}
           className="w-full py-3 px-4 rounded-lg bg-blue-600 text-white flex items-center justify-center gap-2 hover:bg-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <CreditCard size={20} />
-          Pay Now
+          Pay OK
         </button>
       </div>
     </div>
+          </RainbowKitProvider>
+        </QueryClientProvider>
+      </WagmiProvider>
   );
 }
 
