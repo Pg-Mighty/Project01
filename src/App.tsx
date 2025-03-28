@@ -133,7 +133,7 @@ function App() {
           className="w-full py-3 px-4 rounded-lg bg-blue-600 text-white flex items-center justify-center gap-2 hover:bg-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <CreditCard size={20} />
-          Pay OK
+          Pay
         </button>
       </div>
     </div>
