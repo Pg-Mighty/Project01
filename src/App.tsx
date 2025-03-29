@@ -29,15 +29,16 @@ function App() {
     'Polygon',
     'Avalanche'
   ];
-  const API_KEY = null;
+
 
   const handleConnect = () => {
     setIsWalletConnected(true);
   };
 
   const handlePay = async () => {
-      const url = 'https://monad-testnet.g.alchemy.com/v2/{API_KEY}';
-      const headers = {
+    const url = `https://monad-testnet.g.alchemy.com/v2/${API_KEY}`;
+
+    const headers = {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       };
