@@ -170,7 +170,7 @@ function App() {
                     className={`w-full py-3 px-4 rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-700 transition-all disabled:bg-gray-300 disabled:cursor-not-allowed flex items-center justify-center gap-2`}
                 >
                   <CreditCard size={20} /> {/* Changed Icon for Pay */}
-                  Pay with Crypto
+                  Pay
                 </button>
               </div>
             </div>
