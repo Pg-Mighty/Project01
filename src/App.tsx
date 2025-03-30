@@ -139,27 +139,6 @@ function App() {
                   </div>
                 </div>
 
-                {/* Chain Selection */}
-                <div className="mb-6">
-                  <label htmlFor="chain" className="block text-sm font-medium text-gray-700 mb-2">
-                    Select Chain
-                  </label>
-                  <div className="relative">
-                    <select
-                        id="chain"
-                        value={selectedChain}
-                        onChange={(e) => setSelectedChain(e.target.value)}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 appearance-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                    >
-                      {chains.map((chain) => (
-                          <option key={chain} value={chain}>
-                            {chain}
-                          </option>
-                      ))}
-                    </select>
-                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" size={20} />
-                  </div>
-                </div>
 
                 {/* Pay Button */}
                 <button
