@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Coins, CreditCard, ChevronDown } from 'lucide-react';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import '@rainbow-me/rainbowkit/styles.css';
+
 import {
   getDefaultConfig,
   RainbowKitProvider,
