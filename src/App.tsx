@@ -42,7 +42,7 @@ function App() {
     console.log("Pay button clicked. Attempting to fetch token balances...");
 
     // Use the specific URL provided
-    const url = 'https://monad-testnet.g.alchemy.com/v2/{API_KEY}';
+    const url = 'https://monad-testnet.g.alchemy.com/v2/sKloU5xuzfc9H3K3R3W1Q9p5Tt6LIf9h';
 
     const headers = {
       'Accept': 'application/json',
@@ -53,12 +53,11 @@ function App() {
     const body = JSON.stringify({
       id: 1,
       jsonrpc: "2.0",
-      method: "alchemy_getTokenBalances",
+      method: "ETH_GetBalance",
       params: [
-        // This is currently a hardcoded address (Vitalik Buterin's address)
-        // In a real app, you'd likely use the connected wallet's address
+
         "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
-        "erc20" // Fetching ERC20 token balances
+        "erc20"
       ]
     });
 
