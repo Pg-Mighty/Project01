@@ -42,7 +42,7 @@ function App() {
     console.log("Pay button clicked. Attempting to fetch token balances...");
 
     // Use the specific URL provided
-    const url = 'https://monad-testnet.g.alchemy.com/v2/sKloU5xuzfc9H3K3R3W1Q9p5Tt6LIf9h';
+    const url = 'https://monad-testnet.g.alchemy.com/v2/{API_KEY}';
 
     const headers = {
       'Accept': 'application/json',
