@@ -53,7 +53,7 @@ function App() {
     const body = JSON.stringify({
       id: 1,
       jsonrpc: "2.0",
-      method: "ETH_GetBalance",
+      method: "eth_getBalance",
       params: [
 
         "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
