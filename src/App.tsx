@@ -75,11 +75,8 @@ function App() {
       }
 
       const data = await response.json();
-      console.log('Successfully fetched token balances:', data);
-      // ---
-      // TODO: Implement actual payment logic here based on the amount,
-      // selected chain, and potentially the fetched balances or user confirmation.
-      // This current fetch only *reads* balances, it doesn't *send* a transaction.
+      alert('Successfully fetched token balances:', data);
+
       alert('Fetched token balances (see console). Actual payment logic needs implementation.');
       // ---
 
