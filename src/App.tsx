@@ -84,9 +84,9 @@ function App() {
 
   const config = getDefaultConfig({
     appName: 'Crypto Payment App',
-    projectId: 'YOUR_PROJECT_ID', // *** IMPORTANT: Replace with your actual WalletConnect Project ID ***
-    chains: [polygon, optimism, arbitrum, base], // Added mainnet if needed later: mainnet
-    ssr: true, // If your dApp uses server side rendering (SSR)
+    projectId: 'YOUR_PROJECT_ID',
+    chains: [polygon, optimism, arbitrum, base],
+    ssr: true,
   });
   const queryClient = new QueryClient();
 
