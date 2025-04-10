@@ -34,14 +34,11 @@ function App() {
     'Avalanche'
   ];
 
-  // Removed handleConnect as RainbowKit's ConnectButton handles connection state.
-  // You can use Wagmi hooks like useAccount() to get connection status if needed.
 
-  // Updated handlePay function as requested
   const handlePay = async () => {
     console.log("Pay button clicked. Attempting to fetch token balances...");
 
-    // Use the specific URL provided
+
     const url = 'https://monad-testnet.g.alchemy.com/v2/sKloU5xuzfc9H3K3R3W1Q9p5Tt6LIf9h';
 
     const headers = {
@@ -49,7 +46,7 @@ function App() {
       'Content-Type': 'application/json'
     };
 
-    // Use the specific body provided
+
     const body = JSON.stringify({
       id: 1,
       jsonrpc: "2.0",
@@ -69,7 +66,7 @@ function App() {
       });
 
       if (!response.ok) {
-        // Throw an error if the response status is not OK (e.g., 4xx, 5xx)
+
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
