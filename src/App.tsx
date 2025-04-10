@@ -74,7 +74,7 @@ function App() {
       alert('Successfully fetched token balances:', data);
 
       alert('Fetched token balances (see console). Actual payment logic needs implementation.');
-      // ---
+
 
     } catch (error) {
       console.error('Error fetching token balances:', error);
@@ -83,7 +83,7 @@ function App() {
   };
 
   const config = getDefaultConfig({
-    appName: 'Crypto Payment App', // Changed AppName slightly
+    appName: 'Crypto Payment App',
     projectId: 'YOUR_PROJECT_ID', // *** IMPORTANT: Replace with your actual WalletConnect Project ID ***
     chains: [polygon, optimism, arbitrum, base], // Added mainnet if needed later: mainnet
     ssr: true, // If your dApp uses server side rendering (SSR)
