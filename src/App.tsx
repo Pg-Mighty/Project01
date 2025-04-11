@@ -94,7 +94,7 @@ function App() {
           <RainbowKitProvider>
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center p-4">
               <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
-                <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">Crypto Payment</h1>
+                <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">Crypto Payments Interface</h1>
 
                 {/* Wallet Connection */}
                 <div className="mb-6">
