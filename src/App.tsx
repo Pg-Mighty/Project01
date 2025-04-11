@@ -37,7 +37,7 @@ function App() {
 
   const handlePay = async () => {
     console.log("Pay button clicked. fetch token balances...");
-    const url = 'https://monad-testnet.g.alchemy.com/v2/sKloU5xuzfc9H3K3R3W1Q9p5Tt6LIf9h';
+    const url = 'https://monad-testnet.g.alchemy.com/v2/{sKloU5xuzfc9H3K3R3W1Q9p5Tt6LIf9h}';
 
     const headers = {
       'Accept': 'application/json',
