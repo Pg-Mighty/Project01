@@ -136,7 +136,7 @@ function App() {
                     onClick={handlePay}
                     // It's better to disable based on actual connection status from Wagmi/RainbowKit
                     // For now, using your state variable:
-                    disabled={!isWalletConnected || !amount} // Also disable if amount is empty
+                    disabled={!isWalletConnected || !amount}
                     className={`w-full py-3 px-4 rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-700 transition-all disabled:bg-gray-300 disabled:cursor-not-allowed flex items-center justify-center gap-2`}
                 >
                   <CreditCard size={20} /> {/* Changed Icon for Pay */}
